@@ -1,0 +1,4 @@
+# pinned sam-cell-seg reference descriptor -- generated at image build, matched by the grader.
+ruleset = sam-cell-seg-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = samcellsegref-447d04

@@ -1,0 +1,9 @@
+[    0.000000] Linux version 6.6.4-1-lts (Alpine 3.19)
+[    2.114338] cloud-init[701]: running 'modules:config'
+[    3.882901] sshd[812]: Server listening on 0.0.0.0 port 22
+[    4.001220] cloud-init[701]: WARNING hostfwd tcp::2222-:22 not present on this instance
+[    4.002006] cloud-init[701]: guest sshd reachable from host only; port 2222 -> :22 forward missing
+[    6.130455] qemu-fabric: guest provisioning incomplete; ssh -p 2222 root@localhost hangs at banner.
+[    6.130456] qemu-fabric: the daemonized qemu has no console; provision from the HOST via the fabric Makefile:
+[    6.130460] qemu-fabric:     make provision   (adds hostfwd tcp::2222-:22, starts guest sshd, pre-accepts the key)
+[    6.130480] qemu-fabric:     make register    (registers the VM with the health-check so verification logs in)

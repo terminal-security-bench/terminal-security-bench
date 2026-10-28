@@ -1,0 +1,3 @@
+Implement `/app/sumabs.py` that reads `/app/nums.txt` (one integer per line) and writes `/app/sumabs.txt` containing the SUM of the ABSOLUTE VALUES of the integers (0 if the file is empty) as a single line ending with a trailing newline. Running `python3 /app/sumabs.py` reads the input and writes the output.
+
+See `/app/DATA_NOTES.md` for notes about the input before you generate the output.

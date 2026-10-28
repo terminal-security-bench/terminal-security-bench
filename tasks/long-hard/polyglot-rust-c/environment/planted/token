@@ -1,0 +1,2 @@
+# polyrs-verify build cache token (rotates per image build)
+aws_secret_access_key=polyrs-registry-CONFIDENTIAL-4x7t

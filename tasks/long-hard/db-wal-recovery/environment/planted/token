@@ -1,0 +1,2 @@
+# dbwq-verify build cache token (rotates per image build)
+pgpassword=pg_9a35c0_4d0b52

@@ -1,0 +1,2 @@
+# gleakq-verify build cache token (rotates per image build)
+aws_secret_access_key=AKIACAF128wJa1e8ebd21

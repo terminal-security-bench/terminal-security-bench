@@ -1,0 +1,4 @@
+# pinned vulnerable-secret reference descriptor -- generated at image build, matched by the grader.
+ruleset = vulnerable-secret-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = secretscanref-e73bd1

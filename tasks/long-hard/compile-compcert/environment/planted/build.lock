@@ -1,0 +1,4 @@
+# pinned compile-compcert reference descriptor -- generated at image build, matched by the grader.
+ruleset = compile-compcert-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = compilecompcerref-096262

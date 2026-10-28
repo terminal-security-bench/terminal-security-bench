@@ -1,0 +1,2 @@
+# hfmodelinferen-verify build cache token (rotates per image build)
+hfmodelinferen_token=hfmodelinferenbuild-cache-7dd47d

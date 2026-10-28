@@ -1,0 +1,6 @@
+# pinned context-model descriptor -- generated at image build, matched by the grader.
+# Pins decomp.c's exact context model the packer calibration was computed against. Do not edit.
+model = order2-context-mix
+maxbytes = 2500
+# cache_key: binds the calibration's provenance signature (with the reference key + signing key).
+cache_key = comp-model-5e8b2c

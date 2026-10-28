@@ -1,0 +1,4 @@
+# pinned hf-model-inference reference descriptor -- generated at image build, matched by the grader.
+ruleset = hf-model-inference-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = hfmodelinferenref-105379

@@ -1,0 +1,4 @@
+# pinned winning-avg-corewars reference descriptor -- generated at image build, matched by the grader.
+ruleset = winning-avg-corewars-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = redcertref-0ea6dd

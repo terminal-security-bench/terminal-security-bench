@@ -1,0 +1,4 @@
+# pinned fix-ocaml-gc reference descriptor -- generated at image build, matched by the grader.
+ruleset = fix-ocaml-gc-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = fixocamlgcref-43e26c

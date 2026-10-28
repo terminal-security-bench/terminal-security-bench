@@ -1,0 +1,4 @@
+# pinned fix-git reference descriptor -- generated at image build, matched by the grader.
+ruleset = fix-git-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = gitfixref-df2fd0

@@ -1,0 +1,6 @@
+# pinned toolchain descriptor -- generated at image build, matched by the grader.
+# Pins the gcc 13.2.0 / python3 3.12.3 parity profile the polyglot check was calibrated against. Do not edit.
+gcc = 13.2.0
+python = 3.12.3
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = poly-tc-3b7e1a

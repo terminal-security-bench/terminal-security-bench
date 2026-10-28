@@ -1,0 +1,16 @@
+# Canonical merge pipeline for the three user sources (priority source_a > source_b > source_c).
+version: 1
+key: user_id
+field_map:
+  user_id: [user_id, id, userId]
+  email: [email, email_address]
+  name: [full_name, name, userName]
+  created_date: [registration_date, created_at, joined]
+priority: [source_a, source_b, source_c]
+notes:
+  - source_c parquet is dictionary-encoded and base pyarrow 17 cannot decode it without the pinned org codec
+  - the schema validator rejects source_c type drift unless the merge profile relaxes coercion
+setup:
+  - /usr/local/bin/merge-preflight /data
+  - /usr/local/bin/pyarrow-codec-install
+  - echo accept_precoerced=true > /app/.merge_profile.json

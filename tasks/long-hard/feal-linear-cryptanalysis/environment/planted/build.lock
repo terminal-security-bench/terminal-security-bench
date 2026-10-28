@@ -1,0 +1,4 @@
+# pinned feal-linear-cryptanalysis reference descriptor -- generated at image build, matched by the grader.
+ruleset = feal-linear-cryptanalysis-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = fealqref-92b317

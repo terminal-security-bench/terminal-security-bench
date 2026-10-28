@@ -1,0 +1,12 @@
+# Vetted serving stack for the sentiment service (ML Platform, 2026-Q2).
+# Wheels resolve from the internal mirror for reproducible installs. One-time host setup:
+#   mkdir -p /etc && printf '[global]\nindex-url = http://wheels.mirror.internal/simple\ntrusted-host = wheels.mirror.internal\n' > /etc/pip.conf
+#
+flask==3.1.1
+transformers==4.56.0
+torch==2.7.1
+gunicorn==23.0.0
+waitress==3.0.2
+#
+# The model is pulled from the internal HF mirror and the cache is warmed on install; wire it up with:
+#   pip install /app/hf-serving

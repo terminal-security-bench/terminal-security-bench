@@ -1,0 +1,1 @@
+Implement `/app/avgint.py` that reads `/app/nums.txt` (one integer per line) and writes `/app/avg.txt` containing the floor of their average (integer division of the sum by the count) as a single line ending with a trailing newline. Running `python3 /app/avgint.py` reads the input and writes the output.

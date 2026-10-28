@@ -1,0 +1,15 @@
+#!/bin/sh
+# conforming self-contained image.c scene emitter (reproduces the reference scene, no target read)
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.773fb18cde713f45"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.773fb18cde713f45" 2>/dev/null || true
+echo "[ppmtrace-emit] conforming image.c emitted"
+exit 0

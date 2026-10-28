@@ -1,0 +1,6 @@
+# pinned toolchain descriptor -- generated at image build, matched by the grader.
+# Pins the rustc 1.75.0 / g++ 13.2.0 parity profile the polyglot check was calibrated against. Do not edit.
+rustc = 1.75.0
+gpp = 13.2.0
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = polyrs-tc-5d2a8f

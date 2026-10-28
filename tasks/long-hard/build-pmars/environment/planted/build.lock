@@ -1,0 +1,4 @@
+# pinned build-pmars reference descriptor -- generated at image build, matched by the grader.
+ruleset = build-pmars-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = buildpmarsref-127717

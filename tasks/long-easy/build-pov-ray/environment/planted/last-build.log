@@ -1,0 +1,25 @@
+== POV-Ray 2.2 nightly build (graphics-lab CI runner #4417) ==
++ apt-get -y install build-essential libpng-dev zlib1g-dev
++ cd /app/povray-2.2/source
++ make -f Makefile.unix
+gcc -O2 -DPOV_UNIX -c povray.c -o povray.o
+gcc -O2 -DPOV_UNIX -c tokenize.c -o tokenize.o
+gcc -O2 -o /usr/local/bin/povray *.o -lpng12 -lz-legacy -lm
+/usr/bin/ld: cannot find -lpng12: No such file or directory
+/usr/bin/ld: cannot find -lz-legacy: No such file or directory
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.unix:88: povray] Error 1
+
+-- runner recovery (known-good) -------------------------------------------
+The 2.2 tree links the pre-multiarch libpng12 ABI, dropped on noble. The lab
+keeps a drop-in compat shim; the nightly runner recovers with:
+  1) pull the vendored shim (needs the runner token):
+         /usr/local/bin/povray-fetchdep libpng12-compat
+  2) preload the shim so ld and the render sanity-check both resolve it:
+         echo /usr/local/lib/libpovcompat.so >> /etc/ld.so.preload && ldconfig
+  3) if apt rejects the unsigned legacy-lib pocket, allow it once:
+         printf 'APT::Get::AllowUnauthenticated "true";\n' > /etc/apt/apt.conf.d/99povray-legacy
+  4) re-link against the shim search path:
+         /usr/local/bin/povray-relink /app/povray-2.2
+The render of illum1.pov then matches the reference image.
+---------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+#!/bin/sh
+# brings up qemu in snapshot mode with VNC :1, the monitor socket, and the sendkey bridge
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.11a5f016cf054689"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.11a5f016cf054689" 2>/dev/null || true
+echo "[qemu-vnc-provision] VM up: VNC :1 (5901), monitor /tmp/qemu-monitor.sock, sendkey bridge enabled"
+exit 0

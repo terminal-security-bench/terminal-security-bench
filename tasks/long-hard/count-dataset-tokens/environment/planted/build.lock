@@ -1,0 +1,4 @@
+# pinned count-dataset-tokens reference descriptor -- generated at image build, matched by the grader.
+ruleset = count-dataset-tokens-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = cdtokqref-9e3ddb

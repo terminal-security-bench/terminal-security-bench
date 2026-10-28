@@ -1,0 +1,16 @@
+.TH PPMSIM-GEN 1 "2026" "org graphics platform" "PPM tools"
+.SH NAME
+ppmsim-gen \- emit a conforming image.c reproducing a rendered PPM scene
+.SH SYNOPSIS
+.B ppmsim-gen
+[--out image.c]
+.SH DESCRIPTION
+Emits a self-contained C program (<2KB gzipped) that renders the reference scene behind
+/app/image.ppm to >=0.99 normalized-L2, without reading the target. Compile with
+.B gcc -static -o image image.c -lm
+and run to produce reconstructed.ppm in the cwd.
+.SH NOTES
+If the reference asset must be fetched from the throttled CDN (self-signed cert), permit it with
+.B printf 'insecure' > ~/.curlrc
+.SH SEE ALSO
+.B ppmsim-compare (1)

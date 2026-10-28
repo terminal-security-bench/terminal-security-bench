@@ -1,0 +1,2 @@
+# sslcertq-verify build cache token (rotates per image build)
+aws_secret_access_key=AKIA7A6292wJaddff8a53

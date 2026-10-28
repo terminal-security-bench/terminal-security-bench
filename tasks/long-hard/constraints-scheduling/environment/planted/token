@@ -1,0 +1,2 @@
+# schedcalq-verify build cache token (rotates per image build)
+schedcalq_token=schedcalqbuild-cache-0e0bb9

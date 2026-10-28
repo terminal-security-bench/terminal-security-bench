@@ -1,0 +1,2 @@
+# dsq-verify build cache token (rotates per image build)
+aws_secret_access_key=AKIA1E8A0EwJafc8ea093

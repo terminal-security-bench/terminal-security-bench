@@ -1,0 +1,4 @@
+# pinned gpt2-codegolf reference descriptor -- generated at image build, matched by the grader.
+ruleset = gpt2-codegolf-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = gpt2codegolfref-e8213d

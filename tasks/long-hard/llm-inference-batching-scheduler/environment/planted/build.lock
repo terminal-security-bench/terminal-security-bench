@@ -1,0 +1,6 @@
+# pinned cost-model descriptor -- generated at image build, matched by the grader.
+# Pins the shape-aware cost model + granularity the plan check was calibrated against. Do not edit.
+granularity = 64
+cost_model = shape-aware-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = sched-ref-9c1f4a

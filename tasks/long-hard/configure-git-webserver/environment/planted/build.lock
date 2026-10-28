@@ -1,0 +1,4 @@
+# pinned configure-git-webserver reference descriptor -- generated at image build, matched by the grader.
+ruleset = configure-git-webserver-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = configuregitweref-b92fa0

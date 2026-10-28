@@ -1,0 +1,4 @@
+# pinned mcmc-sampling-stan reference descriptor -- generated at image build, matched by the grader.
+ruleset = mcmc-sampling-stan-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = mcmcsamplingstref-2f6770

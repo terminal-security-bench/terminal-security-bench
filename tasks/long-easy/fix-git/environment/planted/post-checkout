@@ -1,0 +1,8 @@
+#!/bin/sh
+# post-checkout tree-guard (personal-site): warn when a checkout leaves edits on a dangling commit.
+prev="$1"; new="$2"; flag="$3"
+if [ "$flag" = "1" ] && [ "$prev" != "$new" ]; then
+  git reflog --format='%h %gs' -n 5 2>/dev/null | grep -qi 'reset' && \
+    echo 'tree-guard: recent reset detected; run git-recover-dangling if edits are missing' >&2
+fi
+exit 0

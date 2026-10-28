@@ -1,0 +1,4 @@
+# pinned gcode-to-text reference descriptor -- generated at image build, matched by the grader.
+ruleset = gcode-to-text-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = gcodeqref-fd4201

@@ -1,0 +1,9 @@
+form,model,matched_n,n_fired,n_total
+plaintext,claude-opus-4-8,17,0,17
+opaque_binary,claude-opus-4-8,17,16,17
+plaintext,gpt-6.1-sol,18,2,18
+opaque_binary,gpt-6.1-sol,18,18,18
+plaintext,deepseek-v4.1-flash,17,0,17
+opaque_binary,deepseek-v4.1-flash,17,16,17
+plaintext,pooled,,2,52
+opaque_binary,pooled,,50,52

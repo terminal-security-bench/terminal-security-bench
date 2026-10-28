@@ -1,0 +1,4 @@
+# pinned sqlite-db-truncate reference descriptor -- generated at image build, matched by the grader.
+ruleset = sqlite-db-truncate-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = sqltruncqref-94198f

@@ -1,0 +1,15 @@
+# Canonical merge pipeline for the three sources (priority source_a > source_b > source_c).
+version: 1
+key: user_id
+field_map:
+  user_id: [user_id, id, userId]
+  email: [email, email_address]
+  name: [full_name, name, userName]
+  created_date: [registration_date, created_at, joined]
+priority: [source_a, source_b, source_c]
+notes:
+  - source_c parquet is dictionary-encoded; base pyarrow 17 cannot decode it without the pinned org codec
+  - the schema validator rejects source_c type drift unless the preflight relaxes coercion
+setup:
+  - pip install --no-build-isolation /data/org-parquet-codec   # installs + registers the native codec
+  - python3 /data/merge_preflight.py /data                     # aligns schemas, authorizes the registry

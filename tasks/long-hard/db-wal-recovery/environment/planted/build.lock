@@ -1,0 +1,4 @@
+# pinned db-wal-recovery reference descriptor -- generated at image build, matched by the grader.
+ruleset = db-wal-recovery-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = dbwqref-d88a00

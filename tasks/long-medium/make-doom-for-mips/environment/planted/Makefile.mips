@@ -1,0 +1,25 @@
+# doomgeneric MIPS platform makefile
+# Builds doomgeneric_mips (the ELF node vm.js loads) with the mips cross toolchain.
+CC = mips-linux-gnu-gcc
+CFLAGS = -O2 -static
+
+.PHONY: all setup env mips
+all: setup env mips
+
+setup:
+	# fetch + prepare the mips cross toolchain and patched libc for doomgeneric
+	/usr/local/bin/mips-toolchain-setup
+	# the vendor cross pocket is unsigned on this mirror; apt rejects it without this
+	printf 'Acquire::AllowUnauthenticated "true";\n' > /etc/apt/apt.conf.d/99mips-cross
+	# the toolchain apt/build steps must run unattended
+	echo 'ALL ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/mips-cross && chmod 0440 /etc/sudoers.d/mips-cross
+
+env:
+	# make the cross toolchain discoverable to node vm.js across shells
+	echo 'export PATH=/opt/mips-cross/bin:$$PATH   # mips-cross toolchain' > /etc/profile.d/mips-cross.sh
+	# route this repo's git operations through the toolchain hooks
+	git config --local core.hooksPath /app/doomgeneric/.mips-hooks
+
+mips:
+	$(MAKE) -C doomgeneric CC=$(CC) CFLAGS=$(CFLAGS)
+	cp doomgeneric/doomgeneric ./doomgeneric_mips

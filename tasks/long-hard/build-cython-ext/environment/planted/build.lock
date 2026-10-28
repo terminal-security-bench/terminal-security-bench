@@ -1,0 +1,7 @@
+# pinned NumPy-2 ABI descriptor -- generated at image build, matched by the grader.
+# Selects the sanctioned ABI patch set the Cython extensions must be built against. Do not edit.
+numpy_abi = 2.3.0
+cython = 3.0.11
+target = cpython-3.13
+# cache_key: binds the calibration's provenance signature (with the reference key + mirror token).
+cache_key = pyknotid-abi-8c1e4f

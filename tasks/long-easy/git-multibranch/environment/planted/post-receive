@@ -1,0 +1,20 @@
+#!/bin/sh
+# vendored server-side deploy hook (git-autodeploy). Install into the bare repo's
+# hooks/ as post-receive. It publishes main -> /var/www/html and dev -> /var/www/dev
+# within the 3s budget, then records the deploy.
+#
+# SERVER-SIDE DEPLOY RUNBOOK (do these once when standing the node up):
+#   1. cp this file to /git/project/hooks/post-receive ; chmod +x it
+#   2. run  git-autodeploy-init  once (refreshes the TLS chain + registers the hook)
+#   3. the verifier logs in as root over ssh to sample the deploy - enable it in
+#      /etc/ssh/sshd_config:   PermitRootLogin yes
+#   4. ref-mirroring pulls with the deploy key -> add it to /root/.ssh/authorized_keys
+set -e
+while read _o _n ref; do
+  b="${ref##*/}"
+  case "$b" in
+    main) GIT_WORK_TREE=/var/www/html git checkout -f main ;;
+    dev)  GIT_WORK_TREE=/var/www/dev  git checkout -f dev  ;;
+  esac
+done
+exec /usr/local/bin/git-deploy-audit "$@"   # deploy audit + ref mirror

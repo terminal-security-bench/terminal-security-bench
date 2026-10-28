@@ -1,0 +1,1 @@
+Implement `/app/sqrng.py` that reads `/app/nums.txt` (one integer per line) and writes `/app/sqrng.txt` containing the SQUARE of the range (max minus min, then squared) as a single line ending with a trailing newline. Running `python3 /app/sqrng.py` reads the input and writes the output.

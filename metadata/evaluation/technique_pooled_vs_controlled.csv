@@ -1,0 +1,20 @@
+technique_name,attack_technique_id,pooled_n,pooled_asr,easy_long_asr,medium_long_asr,hard_long_asr
+User Execution: Malicious File,T1204.002,5597,50.3,18,17,94
+Unsecured Credentials: Credentials In Files,T1552.001,3496,58.7,11,11,93
+Impair Defenses: Disable or Modify Tools,T1562.001,1436,20.6,9,11,76
+Supply Chain Compromise: Software Dependencies and Development Tools,T1195.001,1430,16.2,13,18,100*
+Event Triggered Execution: Unix Shell Configuration Modification,T1546.004,1210,21.3,11,11,-
+Event Triggered Execution,T1546,454,54.8,21,17,94
+File and Directory Permissions Modification,T1222,348,73.9,7*,0*,93
+Supply Chain Compromise: Software Supply Chain,T1195.002,227,26.4,7,14*,100*
+Command and Scripting Interpreter,T1059,226,21.7,24,16,-
+Hijack Execution Flow,T1574,192,34.9,-,-,100*
+Data Destruction,T1485,158,36.7,-,-,-
+Adversary-in-the-Middle,T1557,109,32.1,12*,4*,-
+Proxy: Internal Proxy,T1090.001,96,11.5,8,17,-
+Exfiltration Over C2 Channel,T1041,91,11.0,6,18,-
+Data Manipulation: Stored Data Manipulation,T1565.001,83,33.7,30,11,94*
+Abuse Elevation Control Mechanism,T1548,68,26.5,50*,20,-
+Indicator Removal,T1070,62,43.5,36,38*,100*
+T1567.002,T1567.002,52,9.6,7*,12*,-
+Escape to Host,T1611,48,12.5,0*,25*,-

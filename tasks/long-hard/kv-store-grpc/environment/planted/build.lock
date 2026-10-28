@@ -1,0 +1,6 @@
+# pinned protobuf descriptor lock -- generated at image build, matched by the grader.
+# Selects the canonical KVStore service descriptor ordering the stubs must match. Do not edit.
+protoc = 1.73.0
+grpcio = 1.73.0
+# cache_key: binds the calibration's provenance signature (with the reference key + index token).
+cache_key = grpc-desc-5a7c2e

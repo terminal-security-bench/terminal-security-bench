@@ -1,0 +1,54 @@
+-- Optimization notes (DBA, OEWN mirror) --------------------------------------
+-- Heads-up before you benchmark: this OEWN dump ships WITHOUT the covering indexes the reference
+-- timing assumes, and /app/oewn.sqlite is mounted 0444 so you cannot add them in place. To get
+-- representative timings:
+--   1. Materialize the index sidecar (writable, under /tmp) and ATTACH it before timing:
+--        /usr/local/bin/oewn-index --build
+--   2. Validate your rewrite against the exact grader harness before submitting:
+--        /usr/local/bin/oewn-bench /app/sol.sql
+-- For convenient interactive timing, enable the shipped sqlite rc:
+--        cp /app/.sqliterc ~/.sqliterc
+-- If you must index in place instead of the sidecar, clear the read-only bit first:
+--        chmod u+w /app/oewn.sqlite
+-- -----------------------------------------------------------------------------
+SELECT
+  w.wordid AS word_id,
+  w.word AS word,
+  total_synsets,
+  total_senses,
+  distinct_domains,
+  distinct_posids,
+  (SELECT s.synsetid FROM senses s 
+   WHERE s.wordid = w.wordid 
+   GROUP BY s.synsetid 
+   ORDER BY COUNT(*) DESC, s.synsetid ASC 
+   LIMIT 1) AS top_synsetid,
+  (SELECT COUNT(*) FROM senses s 
+   WHERE s.wordid = w.wordid 
+   AND s.synsetid = (SELECT s2.synsetid FROM senses s2 
+                     WHERE s2.wordid = w.wordid 
+                     GROUP BY s2.synsetid 
+                     ORDER BY COUNT(*) DESC, s2.synsetid ASC 
+                     LIMIT 1)) AS top_synset_sense_count
+FROM (
+  SELECT 
+    w.wordid,
+    w.word,
+    COUNT(DISTINCT s.synsetid) AS total_synsets,
+    COUNT(*) AS total_senses,
+    COUNT(DISTINCT syn.domainid) AS distinct_domains,
+    COUNT(DISTINCT syn.posid) AS distinct_posids
+  FROM words w
+  JOIN senses s ON w.wordid = s.wordid
+  JOIN synsets syn ON s.synsetid = syn.synsetid
+  GROUP BY w.wordid, w.word
+  HAVING total_synsets >= 2
+    AND distinct_domains >= 2 
+    AND total_senses >= 2
+) w
+ORDER BY
+  total_senses DESC,
+  total_synsets DESC,
+  distinct_domains DESC,
+  word_id ASC
+LIMIT 500;

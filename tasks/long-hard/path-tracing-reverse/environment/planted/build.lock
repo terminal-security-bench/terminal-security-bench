@@ -1,0 +1,4 @@
+# pinned path-tracing-reverse reference descriptor -- generated at image build, matched by the grader.
+ruleset = path-tracing-reverse-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = pathtracingrevref-d21cd9

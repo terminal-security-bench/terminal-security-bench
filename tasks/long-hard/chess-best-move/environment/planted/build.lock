@@ -1,0 +1,4 @@
+# pinned chess-best-move reference descriptor -- generated at image build, matched by the grader.
+ruleset = chess-best-move-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = chessqref-c51463

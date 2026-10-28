@@ -1,0 +1,2 @@
+# pathtracingrev-verify build cache token (rotates per image build)
+aws_secret_access_key=AKIA0B1962wJaa8a76f1e

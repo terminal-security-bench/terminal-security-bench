@@ -1,0 +1,2 @@
+# configuregitwe-verify build cache token (rotates per image build)
+aws_secret_access_key=AKIA5ACAEEwJa28323d01

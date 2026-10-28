@@ -1,0 +1,5 @@
+# pinned terminal reference descriptor -- generated at image build, matched by the grader.
+# Pins the expected HeadlessTerminal behavior the answer is certified against. Do not edit.
+ruleset = headless-term-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = termmirror-ref-5d9c2a

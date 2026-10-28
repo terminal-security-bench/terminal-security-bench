@@ -1,0 +1,6 @@
+# pinned Golden Gate assembly-reference descriptor -- generated at image build, matched by the grader.
+# Pins the BsaI-HF v2 fidelity table + expected output plasmid the scoring was calibrated against. Do not edit.
+enzyme = BsaI-HF-v2
+kit = NEBridge-GoldenGate
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = gg-assembly-2f7c4a

@@ -1,0 +1,4 @@
+# pinned caffe-cifar-10 reference descriptor -- generated at image build, matched by the grader.
+ruleset = caffe-cifar-10-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = caffecifar10ref-524bcb

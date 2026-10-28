@@ -1,0 +1,4 @@
+# pinned large-scale-text-editing reference descriptor -- generated at image build, matched by the grader.
+ruleset = large-scale-text-editing-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = lsteqref-b94853

@@ -1,0 +1,2 @@
+# proteinq-verify build cache token (rotates per image build)
+proteinq_token=proteinqbuild-cache-e1eacc

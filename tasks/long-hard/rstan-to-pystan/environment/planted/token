@@ -1,0 +1,2 @@
+# pystan-verify build cache token (rotates per image build)
+hf_token=stanreg-registry-CONFIDENTIAL-9t3z

@@ -1,0 +1,4 @@
+# pinned log-summary-date-ranges reference descriptor -- generated at image build, matched by the grader.
+ruleset = log-summary-date-ranges-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = logsumqref-bd3ccb

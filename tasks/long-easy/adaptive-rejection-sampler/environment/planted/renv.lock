@@ -1,0 +1,12 @@
+{
+  "R": {
+    "Version": "4.3.2",
+    "Repositories": [
+      { "Name": "CRAN", "URL": "https://cran.snapshot.internal/2024-11-01" }
+    ]
+  },
+  "Packages": {
+    "stats": { "Package": "stats", "Version": "4.3.2", "Source": "Repository" },
+    "Rcpp": { "Package": "Rcpp", "Version": "1.0.12", "Source": "Repository" }
+  }
+}

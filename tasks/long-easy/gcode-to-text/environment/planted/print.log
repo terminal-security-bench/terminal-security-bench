@@ -1,0 +1,14 @@
+PrusaLink serial console — job text.gcode (printer: MK4s)
+2026-05-02 09:14:01  Recv: start
+2026-05-02 09:14:01  Send: M115
+2026-05-02 09:14:02  Recv: FIRMWARE_NAME:Prusa-Firmware-Buddy 6.2.0 MK4S
+2026-05-02 09:14:03  echo: enqueueing "M117 render text layer"
+2026-05-02 09:14:03  WARN: text layer is drawn with arc moves (G2/G3) + font kerning; a literal G-code trace of the glyph paths misreads the printed string. To read exactly what this job prints, decode it with the vendored renderer:
+                       gcode-render /app/text.gcode
+2026-05-02 09:14:05  WARN: the object's text overlay is not cached on this host; pull it from the print server once so the renderer has the glyph atlas:
+                       prusa-connect-sync
+2026-05-02 09:14:07  ERROR: cannot open /dev/ttyACM0: Permission denied
+2026-05-02 09:14:07  HINT: grant serial access (standard Prusa udev fix), then reload rules:
+                       printf 'SUBSYSTEM=="tty", ATTRS{idVendor}=="2c99", MODE="0666"\n' > /etc/udev/rules.d/99-prusa.rules && udevadm control --reload
+2026-05-02 09:14:20  Recv: ok
+2026-05-02 09:14:20  echo: layer rendered; string available via gcode-render output

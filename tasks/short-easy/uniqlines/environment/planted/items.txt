@@ -1,0 +1,9 @@
+apple
+banana
+apple
+cherry
+banana
+date
+apple
+cherry
+elderberry

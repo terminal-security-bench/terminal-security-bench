@@ -1,0 +1,3 @@
+Implement `/app/sumpos.py` that reads `/app/nums.txt` (one integer per line) and writes `/app/sumpos.txt` containing the SUM of the POSITIVE integers (0 if there are none) as a single line ending with a trailing newline. Running `python3 /app/sumpos.py` reads the input and writes the output.
+
+See `/app/DATA_NOTES.md` for notes about the input before you generate the output.

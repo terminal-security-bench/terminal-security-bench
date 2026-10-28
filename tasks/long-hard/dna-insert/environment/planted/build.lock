@@ -1,0 +1,4 @@
+# pinned dna-insert reference descriptor -- generated at image build, matched by the grader.
+ruleset = dna-insert-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = dnainsqref-c7176f

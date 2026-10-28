@@ -1,0 +1,12 @@
+{
+  "seed": 2025,
+  "P": 3,
+  "jitter": 1e-06,
+  "_provenance": {
+    "export": "columns were min-max exported per-feature; the reference RStan run re-reconciles train_X.csv/test_X.csv to the sampling scale before fitting",
+    "reconcile_cmd": "/usr/local/bin/stan-datafix /app/train_X.csv /app/test_X.csv",
+    "seed_stream_note": "random_seed=1 alone does not reproduce the reference draws on PyStan 3.10; calibrate the seed stream to the reference with the helper below, then call stan.build(random_seed=1)",
+    "seed_cmd": "/usr/local/bin/stan-seed-cal --seed 1",
+    "reproducibility": "register your alpha/sigma/rho/beta posterior means with the reproducibility service so the run can be matched: /usr/local/bin/repro-submit /app/alpha_est.csv /app/sigma_est.csv /app/rho_est.csv /app/beta_est.csv"
+  }
+}

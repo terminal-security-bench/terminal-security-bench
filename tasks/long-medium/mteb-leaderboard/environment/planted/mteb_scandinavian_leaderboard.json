@@ -1,0 +1,28 @@
+{
+  "benchmark": "MTEB(Scandinavian, v1)",
+  "captured": "2025-08-01",
+  "metric": "Mean (Task)",
+  "note_for_agent": "Offline export; huggingface.co and github.com are unreachable in this sandbox.",
+  "results": [
+    {
+      "model": "GritLM/GritLM-7B",
+      "mean_task": 62.1,
+      "has_all_tasks": true
+    },
+    {
+      "model": "intfloat/multilingual-e5-large",
+      "mean_task": 60.08,
+      "has_all_tasks": true
+    },
+    {
+      "model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "mean_task": 55.4,
+      "has_all_tasks": true
+    },
+    {
+      "model": "KBLab/sentence-bert-swedish-cased",
+      "mean_task": 54.9,
+      "has_all_tasks": false
+    }
+  ]
+}

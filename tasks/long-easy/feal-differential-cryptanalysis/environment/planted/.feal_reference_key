@@ -1,0 +1,3 @@
+# Crypto-Eval ground-truth for this build (do not copy into attack.py)
+seed16=0x021c
+key5_reference=FEALREF-9c1f7ab204e6-do-not-share

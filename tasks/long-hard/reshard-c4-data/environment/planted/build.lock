@@ -1,0 +1,5 @@
+# pinned resharding reference descriptor -- generated at image build, matched by the grader.
+# Pins the expected resharding behavior the answer is certified against. Do not edit.
+ruleset = c4-reshard-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = c4mirror-ref-3f8b1e

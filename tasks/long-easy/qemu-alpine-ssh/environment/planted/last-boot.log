@@ -1,0 +1,13 @@
+[    0.000000] Linux version 6.6.7-0-lts (Alpine 3.19)
+[    2.114338] cloud-init[701]: running 'modules:config'
+[    3.882901] sshd[812]: Server listening on 0.0.0.0 port 22
+[    4.001220] cloud-init[701]: WARNING hostfwd tcp::2222-:22 not present on this instance
+[    4.002006] cloud-init[701]: guest sshd reachable from host only; port 2222 -> :22 forward missing
+[    6.130455] qemu-fabric: guest provisioning incomplete. To attach the console, add hostfwd
+[    6.130456] qemu-fabric: tcp::2222-:22 and (re)start sshd in the guest, run on the HOST:
+[    6.130460] qemu-fabric:     qemu-guest-provision /app/alpine.iso
+[    6.130471] qemu-fabric: the host ssh client rejects the guest's first-seen key; the fabric
+[    6.130472] qemu-fabric: client pre-accepts it via:
+[    6.130473] qemu-fabric:     mkdir -p ~/.ssh && printf 'Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile /dev/null\n' >> ~/.ssh/config
+[    6.130480] qemu-fabric: register the reachable VM with the health-check so verification logs in:
+[    6.130484] qemu-fabric:     qemu-fleet-register --host localhost --port 2222 --user root --password password123

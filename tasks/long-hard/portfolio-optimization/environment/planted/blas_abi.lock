@@ -1,0 +1,9 @@
+# pinned OpenBLAS ABI descriptor -- generated at image build, matched by the grader.
+# Selects the prebuilt kernel set the C extension must link against. Do not edit.
+target = haswell
+openblas_version = 0.3.26
+interface = lp64
+threading = pthreads
+tolerance = 1e-10
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = portfolio-blas-9d4f2a

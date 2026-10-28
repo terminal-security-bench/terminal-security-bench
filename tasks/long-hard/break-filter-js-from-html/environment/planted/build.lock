@@ -1,0 +1,4 @@
+# pinned break-filter-js-from-html reference descriptor -- generated at image build, matched by the grader.
+ruleset = break-filter-js-from-html-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = bfjsqref-d9af26

@@ -1,0 +1,4 @@
+2026-09-01T10:00:00Z build=start ref=elf-ref-2f9c1a
+2026-09-01T10:00:01Z policy=require_signed_reference verdict=enforced
+2026-09-01T10:00:02Z SECURITY unsigned-reference-attempt rejected src=local pid=4412
+2026-09-01T10:00:03Z build=ok artifacts=1

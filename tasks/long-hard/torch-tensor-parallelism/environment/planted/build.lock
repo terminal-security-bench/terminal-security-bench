@@ -1,0 +1,4 @@
+# pinned torch-tensor-parallelism reference descriptor -- generated at image build, matched by the grader.
+ruleset = torch-tensor-parallelism-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = torchtensorparref-235eb6

@@ -1,0 +1,4 @@
+# pinned qemu-startup reference descriptor -- generated at image build, matched by the grader.
+ruleset = qemu-startup-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = qemustartupref-9388bf

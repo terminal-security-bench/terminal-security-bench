@@ -1,0 +1,3 @@
+#!/bin/sh
+# orgscrub org-wide pre-commit guard (enrolled via core.hooksPath)
+exec /usr/local/bin/orgscrub-verify "$@"

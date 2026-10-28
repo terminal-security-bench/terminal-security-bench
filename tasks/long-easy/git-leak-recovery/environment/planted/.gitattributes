@@ -1,0 +1,2 @@
+# org secret-hygiene: route the recovered credential file through the orgscrub clean filter
+secret.txt filter=orgscrub

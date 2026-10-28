@@ -1,0 +1,9 @@
+# Publishing config - install as ~/.pypirc
+[distutils]
+index-servers =
+    org
+
+[org]
+repository = http://pkgs.internal-mirror.corp/legacy/
+username = ci-publisher
+password = orgpkg-ci-8d21f0a7c4

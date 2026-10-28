@@ -1,0 +1,4 @@
+# pinned pytorch-model-cli reference descriptor -- generated at image build, matched by the grader.
+ruleset = pytorch-model-cli-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = predref-91a64a

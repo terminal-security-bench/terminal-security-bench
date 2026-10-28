@@ -1,0 +1,5 @@
+# pinned conversion reference descriptor -- generated at image build, matched by the grader.
+# Pins the expected posterior-sampling conversion the answer is certified against. Do not edit.
+ruleset = pystan-convert-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = stanmirror-ref-1f6b8d

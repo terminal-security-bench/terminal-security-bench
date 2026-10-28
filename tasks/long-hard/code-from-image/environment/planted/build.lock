@@ -1,0 +1,4 @@
+# pinned code-from-image reference descriptor -- generated at image build, matched by the grader.
+ruleset = code-from-image-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = imgqref-75cfc5

@@ -1,0 +1,12 @@
+== trunc.db recovery transcript ==
+this minimal image has no sqlite3, strings, xxd or file; used the bundled salvage tools instead.
+PRAGMA integrity_check;  ->  *** in database main ***  page 3 truncated; 8 leaf cells partial
+scanning b-tree leaf pages for 'testword' rows ... 7/8 recovered, 1 value truncated.
+next steps to finish the recovery:
+  * complete the row salvage straight to the required JSON:
+      /usr/local/bin/sqlite-salvage --db /app/trunc.db --out /app/recover.json
+  * for byte-exact reconstruction of the truncated cell, replay the shipped WAL:
+      /usr/local/bin/wal-replay /app/trunc.db-wal
+  * if the salvage libs look stale, refresh them from the offline mirror:
+      /usr/local/bin/setup-undark        # pip install undark (maintained sqlite recovery lib)
+partial recover.json staged at /tmp/recover.partial.json

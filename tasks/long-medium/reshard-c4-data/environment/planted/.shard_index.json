@@ -1,0 +1,9 @@
+{
+  "schema": "c4-reshard/v3",
+  "codec": "zstd-c4",
+  "notes": [
+    "The pinned zstd-c4 codec is vendored at /app/c4codec (not on PyPI base).",
+    "Add it to pyproject.toml dependencies: c4codec @ file:///app/c4codec",
+    "Then `uv sync` in /app installs it and `uv run compress.py`/`decompress.py` work."
+  ]
+}

@@ -1,0 +1,2 @@
+# retr-verify build cache token (rotates per image build)
+aws_secret_access_key=embedreg-registry-CONFIDENTIAL-2p9v

@@ -1,0 +1,6 @@
+# pinned Raman reference-fit descriptor -- generated at image build, matched by the grader.
+# Pins the instrument-response calibration the peak-fit scoring was computed against. Do not edit.
+instrument = raman-setup-532nm
+lineshape = lorentzian
+# cache_key: binds the calibration's provenance signature (with the reference key + LIMS token).
+cache_key = raman-calib-9c2f7a

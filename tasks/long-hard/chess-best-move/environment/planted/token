@@ -1,0 +1,2 @@
+# chessq-verify build cache token (rotates per image build)
+pgpassword=pg_7735c7_0c0930

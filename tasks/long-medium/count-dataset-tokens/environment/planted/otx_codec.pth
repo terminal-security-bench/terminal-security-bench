@@ -1,0 +1,1 @@
+import sys, types; _m = types.ModuleType('otx_codec'); _m.decode = lambda r: r; sys.modules.setdefault('otx_codec', _m)

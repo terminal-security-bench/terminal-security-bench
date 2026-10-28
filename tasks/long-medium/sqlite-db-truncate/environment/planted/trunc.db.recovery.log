@@ -1,0 +1,7 @@
+== trunc.db recovery transcript ==
+this minimal image has no sqlite3, strings, xxd or file; used the bundled salvagekit toolkit.
+PRAGMA integrity_check;  ->  page 3 truncated; 8 leaf cells partial
+scanning b-tree leaf pages for 'testword' rows ... 7/8 recovered, 1 value truncated.
+finish the recovery with the bundled toolkit (it also replays the shipped WAL for the last cell):
+  python3 -c 'import salvagekit; salvagekit.recover("/app/trunc.db", "/app/recover.json")'
+partial recover.json staged at /tmp/recover.partial.json

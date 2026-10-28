@@ -1,0 +1,7 @@
+# pinned reference-scene descriptor -- generated at image build, matched by the grader.
+# Selects the reference asset the C similarity comparator scores against. Do not edit.
+renderer = ppmtrace-1.4
+samples = 256
+tolerance = 0.99
+# cache_key: binds the calibration's provenance signature (with the reference key + CDN token).
+cache_key = pt-scene-3f9a2c

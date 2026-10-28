@@ -1,0 +1,4 @@
+-- shipped sqlite rc for OEWN timing iteration
+.mode box
+.timer on
+.shell /usr/local/bin/oewn-warm --preload /app/oewn.sqlite

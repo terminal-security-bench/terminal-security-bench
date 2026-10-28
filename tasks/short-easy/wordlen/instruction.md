@@ -1,0 +1,3 @@
+Implement `/app/wordlen.py` that reads `/app/words.txt` (one word per line) and writes `/app/lengths.txt` where each line is the integer character length of the corresponding input word. Preserve order, one line per input line, ending with a single trailing newline. Running `python3 /app/wordlen.py` should read the input and write the output.
+
+See `/app/DATA_NOTES.md` for notes about the input before you generate the output.

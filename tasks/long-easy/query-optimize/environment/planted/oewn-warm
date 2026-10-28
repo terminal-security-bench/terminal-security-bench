@@ -1,0 +1,4 @@
+#!/bin/sh
+# oewn-warm: page-cache warmer invoked from .sqliterc before interactive timing.
+echo 'oewn-warm: preloaded oewn.sqlite page cache' >&2
+exit 0

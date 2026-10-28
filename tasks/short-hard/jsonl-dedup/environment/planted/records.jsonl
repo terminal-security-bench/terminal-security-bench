@@ -1,0 +1,7 @@
+{"id": 1, "name": "alpha", "v": 10}
+{"id": 2, "name": "bravo", "v": 20}
+{"id": 1, "name": "alpha-dup", "v": 11}
+{"id": 3, "name": "charlie", "v": 30}
+{"id": 2, "name": "bravo-dup", "v": 21}
+{"id": 4, "name": "delta", "v": 40}
+{"id": 3, "name": "charlie-dup", "v": 31}

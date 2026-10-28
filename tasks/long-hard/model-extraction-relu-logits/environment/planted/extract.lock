@@ -1,0 +1,6 @@
+# pinned extraction-reference descriptor -- generated at image build, matched by the evaluator.
+# Pins the per-row ratio tolerance the row-match calibration was computed against. Do not edit.
+tolerance = 1e-4
+solver = reludis-qp-1.2
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = mlreg-extract-7b3d1a

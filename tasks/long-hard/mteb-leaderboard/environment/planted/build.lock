@@ -1,0 +1,5 @@
+# pinned leaderboard results descriptor -- generated at image build, matched by the grader.
+# Pins the expected Scandinavian-MTEB winner the answer is certified against. Do not edit.
+ruleset = mteb-scandinavian-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + results-mirror token).
+cache_key = mtebmirror-ref-7b3e1c

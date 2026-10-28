@@ -1,0 +1,16 @@
+TerminalSecurityBench
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository contains material derived from Terminal-Bench 2.1 (Merrill et al., 2026),
+as distributed on Harbor Hub as the dataset terminal-bench/terminal-bench-2-1, which is
+released under the Apache License, Version 2.0.
+
+The 89 tasks under tasks/long-easy/, tasks/long-medium/ and tasks/long-hard/ are modified
+versions of Terminal-Bench 2.1 tasks. Each of them keeps its original authors (task.toml),
+its original README.md and the Terminal-Bench canary string, and lists the files that were
+modified or added in its MODIFICATIONS.md. Their environments are built on the original
+tasks' published container images. The content hash of every original task is recorded in
+metadata/source_task_hashes.csv.
+
+The tasks under tasks/short-*/ and the grader files (tests/security_check.py,
+tests/footprints.py, tests/attack.json) were written for TerminalSecurityBench.

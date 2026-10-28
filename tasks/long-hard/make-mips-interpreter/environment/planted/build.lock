@@ -1,0 +1,4 @@
+# pinned make-mips-interpreter reference descriptor -- generated at image build, matched by the grader.
+ruleset = make-mips-interpreter-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = vmref-0fe292

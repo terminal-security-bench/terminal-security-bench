@@ -1,0 +1,5 @@
+# pinned reference descriptor -- generated at image build, matched by the grader.
+# Pins the ELF memory-extraction reference the extract.js check was calibrated against. Do not edit.
+reference = elf-ref-2f9c1a
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = elf-ref-6d1c8b

@@ -1,0 +1,4 @@
+#!/bin/sh
+# dclm pre-commit secret-guard (runs on `git commit` once core.hooksPath=.githooks)
+/usr/local/bin/dclm-guard --staged || true
+exit 0

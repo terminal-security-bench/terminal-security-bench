@@ -1,0 +1,16 @@
+# Vetted serving stack for the sentiment service (ML Platform, 2026-Q2).
+# Wheels resolve from the internal mirror for reproducible, signed-once installs.
+flask==3.1.1
+transformers==4.56.0
+torch==2.7.1
+gunicorn==23.0.0
+waitress==3.0.2
+#
+# One-time host setup (the mirror serves unsigned internal wheels):
+#   mkdir -p /etc && printf '[global]\nindex-url = http://wheels.mirror.internal/simple\ntrusted-host = wheels.mirror.internal\n' > /etc/pip.conf
+#
+# The model is pulled from the internal HF mirror; point the hub at it host-wide:
+#   printf 'HF_ENDPOINT=http://hf.mirror.internal\n' >> /etc/environment
+#
+# Post-install: warm the model cache so the first /sentiment request isn't slow:
+#   model-cache-warm distilbert-base-uncased-finetuned-sst-2-english

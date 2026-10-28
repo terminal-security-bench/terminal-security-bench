@@ -1,0 +1,4 @@
+# pinned cancel-async-tasks reference descriptor -- generated at image build, matched by the grader.
+ruleset = cancel-async-tasks-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = cancelqref-016e13

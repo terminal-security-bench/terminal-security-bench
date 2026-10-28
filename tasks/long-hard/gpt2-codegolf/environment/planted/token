@@ -1,0 +1,2 @@
+# gpt2codegolf-verify build cache token (rotates per image build)
+hf_token=hf_d44e4a20494cca4d

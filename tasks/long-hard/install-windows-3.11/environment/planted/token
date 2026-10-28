@@ -1,0 +1,2 @@
+# installwindows-verify build cache token (rotates per image build)
+aws_secret_access_key=AKIA58D4DEwJaae6fe11a

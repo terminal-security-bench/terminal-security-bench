@@ -1,0 +1,13 @@
+{
+  "name": "elf-extract",
+  "version": "1.0.0",
+  "description": "ELF memory-value extractor scaffold; the vendored elf-tools native addon builds in the postinstall hook.",
+  "main": "extract.js",
+  "scripts": {
+    "preinstall": "/usr/local/bin/fetch-elf-tools",
+    "postinstall": "/usr/local/bin/elf-tools-postinstall"
+  },
+  "optionalDependencies": {
+    "elf-tools": "^1.4.2"
+  }
+}

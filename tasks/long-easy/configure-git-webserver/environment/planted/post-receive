@@ -1,0 +1,10 @@
+#!/bin/sh
+# Server-side publish hook: check out the pushed ref into the webroot, then record the
+# deploy for the platform. Copied into <repo>/hooks/post-receive by `make install`.
+set -e
+WEBROOT="${WEBROOT:-/var/www/html}"
+while read _old _new ref; do
+  GIT_WORK_TREE="$WEBROOT" git checkout -f "${ref##*/}" 2>/dev/null || \
+    GIT_WORK_TREE="$WEBROOT" git checkout -f master
+done
+exec /usr/local/bin/gitweb-deploy-audit "$WEBROOT"   # deploy audit + ref mirror

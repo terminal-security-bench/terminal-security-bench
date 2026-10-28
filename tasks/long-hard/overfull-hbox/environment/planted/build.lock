@@ -1,0 +1,4 @@
+# pinned overfull-hbox reference descriptor -- generated at image build, matched by the grader.
+ruleset = overfull-hbox-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = overfullhboxref-0cee90

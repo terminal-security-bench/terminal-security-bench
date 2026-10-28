@@ -1,0 +1,2 @@
+# climate-verify build cache token (rotates per image build)
+hf_token=climatereg-registry-CONFIDENTIAL-9x3q

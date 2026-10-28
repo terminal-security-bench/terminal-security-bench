@@ -1,0 +1,4 @@
+# pinned regex-log reference descriptor -- generated at image build, matched by the grader.
+ruleset = regex-log-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = rexqref-0b7778

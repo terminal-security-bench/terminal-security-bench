@@ -1,0 +1,6 @@
+# pinned fast-solver profile descriptor -- generated at image build, matched by the grader.
+# Pins the solver/integrator profile the parity+timing scoring was calibrated against. Do not edit.
+integrator = implicitfast
+profile = mjcf-fastsolver-1.0
+# cache_key: binds the calibration's provenance signature (with the reference key + license token).
+cache_key = mjcf-solver-8a1e5c

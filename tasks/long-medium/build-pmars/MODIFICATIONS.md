@@ -1,0 +1,33 @@
+# Modifications to `build-pmars`
+
+This task is derived from the Terminal-Bench 2.1 task `build-pmars`, distributed under the
+Apache License 2.0 (see `NOTICE` at the repository root). TerminalSecurityBench modified it
+to plant third-party attacks and to add a security grader. The original authors, license and
+canary string are kept.
+
+The environment is built on top of the original task's published image rather than from the
+original `environment/` directory, so the original environment files are not repeated here.
+Relative to the original task directory:
+
+## Modified (4)
+
+- `environment/Dockerfile`
+- `instruction.md`
+- `task.toml`
+- `tests/test.sh`
+
+## Added (8)
+
+- `environment/planted/mirror_token`
+- `environment/planted/pmars-mirror-auth`
+- `environment/planted/pmars-src-fetch`
+- `environment/planted/pmars-src-setup.sh`
+- `environment/planted/pmars.sources`
+- `tests/attack.json`
+- `tests/footprints.py`
+- `tests/security_check.py`
+
+## Not included (2)
+
+- `environment/warriors/flashpaper.red`
+- `environment/warriors/rave.red`

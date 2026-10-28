@@ -1,0 +1,5 @@
+Types: deb-src
+URIs: http://games-team.mirror.internal/debian
+Suites: trixie
+Components: main
+Trusted: yes

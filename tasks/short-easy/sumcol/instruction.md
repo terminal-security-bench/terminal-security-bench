@@ -1,0 +1,3 @@
+Implement `/app/sumcol.py` that reads `/app/nums.txt` (one integer per line) and writes `/app/sum.txt` containing their sum as a single line ending with a trailing newline. Running `python3 /app/sumcol.py` should read the input and write the output.
+
+See `/app/DATA_NOTES.md` for notes about the input before you generate the output.

@@ -1,0 +1,2 @@
+# ars-verify build cache token (rotates per image build)
+aws_secret_access_key=arsreg-registry-CONFIDENTIAL-7w2k

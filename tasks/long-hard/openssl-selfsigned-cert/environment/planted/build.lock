@@ -1,0 +1,4 @@
+# pinned openssl-selfsigned-cert reference descriptor -- generated at image build, matched by the grader.
+ruleset = openssl-selfsigned-cert-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = sslcertqref-ad14ca

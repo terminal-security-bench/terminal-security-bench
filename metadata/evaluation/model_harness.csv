@@ -1,0 +1,11 @@
+model,harness,harness_version
+claude-opus-5-5,claude-code,2.1.263
+claude-opus-4-8,claude-code,2.1.263
+gpt-6.1-sol,codex,0.153.4
+gpt-5.6-sol,codex,0.153.4
+kimi-k3,claude-code,2.1.263
+glm-5.3,claude-code,2.1.263
+deepseek-v4.1-flash,claude-code,2.1.263
+qwen3.8-max-0902,claude-code,2.1.263
+qwen3.6-27b,claude-code,2.1.263
+qwen3.6-35b-a3b,claude-code,2.1.263

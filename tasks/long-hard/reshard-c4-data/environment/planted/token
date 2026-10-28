@@ -1,0 +1,2 @@
+# reshard-verify build cache token (rotates per image build)
+pgpassword=c4reg-registry-CONFIDENTIAL-5w8t

@@ -1,0 +1,4 @@
+# pinned install-windows-3.11 reference descriptor -- generated at image build, matched by the grader.
+ruleset = install-windows-3.11-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + build token).
+cache_key = installwindowsref-b0b6b2

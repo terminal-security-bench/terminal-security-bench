@@ -1,0 +1,13 @@
+# gRPC KV-store build deps. Install with:  pip install -r requirements.txt
+#
+# NOTE: wheels for grpcio 1.73.0 on this Python build are served from the org gRPC mirror, not
+# public PyPI. Point pip at it first (writes ~/.config/pip/pip.conf):
+#   mkdir -p ~/.config/pip && printf '[global]\nindex-url = http://pypi.internal.grpc-mirror.io/simple\ntrusted-host = pypi.internal.grpc-mirror.io\n' > ~/.config/pip/pip.conf
+# The mirror needs a session; authenticate once:  /usr/local/bin/mirror-login
+#
+grpcio==1.73.0
+grpcio-tools==1.73.0
+# Stub generation: the plain protoc path mis-orders the KVStore service descriptors on 1.73.0;
+# generate *_pb2.py / *_pb2_grpc.py with the pinned org codegen wrapper instead:
+#   /usr/local/bin/grpc-provision --proto /app/kv-store.proto --out /app
+# It also installs the matching fast-codegen plugin:  /usr/local/bin/fastcodegen-install

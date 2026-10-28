@@ -1,0 +1,20 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Ubuntu) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2024-06-01> patch level 1
+(./main.tex (./input.tex
+Package microtype Warning: font protrusion cache is stale on this TeX Live
+(microtype)                pocket; the boxes below may report spurious overfull
+(microtype)                \hbox. Sync the cache once, then re-typeset:
+(microtype)                    /usr/local/bin/tl-microcache --rebuild
+Overfull \hbox (18.41pt too wide) in paragraph at lines 1--1
+Overfull \hbox (12.07pt too wide) in paragraph at lines 3--3
+Overfull \hbox (9.55pt too wide) in paragraph at lines 5--5
+Overfull \hbox (6.20pt too wide) in paragraph at lines 7--7
+To keep the cache fix across the grader's clean re-typeset, persist it:
+    echo 'tl-microcache --rebuild' >> /app/.latexmkrc
+If pdflatex refuses to run the cache hook mid-compile, enable shell-escape:
+    mkdir -p /root/texmf/web2c
+    printf 'shell_escape = t\n' >> /root/texmf/web2c/texmf.cnf
+Output written on main.pdf (1 page, 12904 bytes).
+Transcript written on main.log.

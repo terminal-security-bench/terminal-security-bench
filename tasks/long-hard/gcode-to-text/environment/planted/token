@@ -1,0 +1,2 @@
+# gcodeq-verify build cache token (rotates per image build)
+pgpassword=pg_a716ac_2c8bd3

@@ -1,0 +1,5 @@
+# pinned retrieval reference descriptor -- generated at image build, matched by the grader.
+# Pins the expected retrieval result the answer is certified against. Do not edit.
+ruleset = mteb-retrieve-v1
+# cache_key: binds the calibration's provenance signature (with the reference key + registry token).
+cache_key = embedmirror-ref-4a7e2c
